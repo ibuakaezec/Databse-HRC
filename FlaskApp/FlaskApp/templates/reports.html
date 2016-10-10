@@ -1,0 +1,52 @@
+{% extends "home.html" %}
+{% block body %}
+
+<style>
+	#report-panel{
+		margin: 250px 300px 100px 300px;
+	}
+	.panel-heading{
+		text-align: center;
+		text-decoration: bold;
+		font-size: 18px;
+	}
+	.panel-body{
+		text-align: left;
+	}
+	
+	#submit{
+		padding-left:25px;
+		padding-right:25px;
+		margin-left: 120px;
+		margin-right: 50px;
+		margin-top: 30px;
+	}
+	
+	#cancel{
+		margin-top: 30px;
+		margin-left: 25px;
+		padding-left:25px;
+		padding-right:25px;
+		margin-right: 50px;
+	}
+</style>
+
+<div class = "container">
+	<div class="panel panel-default" id = "report-panel">
+		<div class = "panel-heading">Report</div>
+		<div class="panel-body">
+			<div class = "form-group">
+				<label for = "info">Information</label>
+				<select class = "form-control" id = "info">
+					<option>Attendance</option>
+					<option>Finance</option>
+					<option>Other</option>
+				</select>
+			</div>			
+			<a href = "#" class = "btn btn-primary" id = "submit" role = "button">Submit</a>
+			<a href = "#" class = "btn btn-default" id = "cancel" role = "button">Cancel</a>
+		</div>
+	</div>
+</div>
+
+{% endblock %}
