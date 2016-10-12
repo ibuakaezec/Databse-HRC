@@ -2,19 +2,19 @@
 {% block body %}
 
 <style>
-	#report-panel{
+	#report-panel {
 		margin: 250px 300px 100px 300px;
 	}
-	.panel-heading{
+	.panel-heading {
 		text-align: center;
 		text-decoration: bold;
 		font-size: 18px;
 	}
-	.panel-body{
+	.panel-body {
 		text-align: left;
 	}
 	
-	#submit{
+	#submit {
 		padding-left:25px;
 		padding-right:25px;
 		margin-left: 120px;
@@ -22,7 +22,7 @@
 		margin-top: 30px;
 	}
 	
-	#cancel{
+	#cancel {
 		margin-top: 30px;
 		margin-left: 25px;
 		padding-left:25px;
@@ -30,6 +30,16 @@
 		margin-right: 50px;
 	}
 </style>
+
+<script>
+function submit_report() {
+
+}
+
+function cancel_report() {
+	location.reload();
+}
+</script>
 
 <div class = "container">
 	<div class="panel panel-default" id = "report-panel">
@@ -43,8 +53,8 @@
 					<option>Other</option>
 				</select>
 			</div>			
-			<a href = "#" class = "btn btn-primary" id = "submit" role = "button">Submit</a>
-			<a href = "#" class = "btn btn-default" id = "cancel" role = "button">Cancel</a>
+			<div onclick = "submit_report()"class = "btn btn-primary" id = "submit" role = "button">Submit</div>
+			<div onclick = "cancel_report()" class = "btn btn-default" id = "cancel" role = "button">Cancel</div>
 		</div>
 	</div>
 </div>
